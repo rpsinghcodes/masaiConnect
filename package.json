@@ -16,7 +16,7 @@
     "scripts": {
         "start": "node dist/index.js",
         "dev": "nodemon",
-        "build": "tsc && node dist/index.js",
+        "build": "tsc",
         "prepare": "husky",
         "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest -i --colors --verbose --detectOpenHandles",
         "swagger": "tsx src/swagger.ts"
