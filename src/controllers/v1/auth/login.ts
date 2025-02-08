@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import asyncHandler from '../../../utils/AsyncHandler.js';
 import User from '../../../models/user.model.js';
 import ApiError from '../../../utils/ApiError.js';
@@ -22,7 +22,7 @@ async function generateAccessTokenAndRefreshToken(user: any): Promise<IGenerateT
     }
 }
 
-const login = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+const login = asyncHandler(async (req: Request, res: Response) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user) {
