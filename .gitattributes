@@ -1,0 +1,5 @@
+# Convert text file line endings to LF (Unix-style)
+* text eol=lf  
+
+# Treat all `.js` files as text files (normalize line endings)
+*.js text
